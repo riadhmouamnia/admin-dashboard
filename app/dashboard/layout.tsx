@@ -1,6 +1,6 @@
 import Navbar from "@ui/dashboard/navbar";
 import Sidebar from "@ui/dashboard/sidebar";
-import styles from "@ui/dashboard/dashboard.module.css";
+import styles from "@ui/dashboard/dashboard.module.scss";
 
 export default function DashboardLayout({
   children,
