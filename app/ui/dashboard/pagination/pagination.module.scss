@@ -1,0 +1,26 @@
+.container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  .button {
+    padding: 10px;
+    background-color: #2e374a;
+    min-width: 75px;
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: #262e3b;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #242a36;
+      color: #565f74;
+      &:hover {
+        background-color: #242a36;
+      }
+    }
+  }
+}
