@@ -1,4 +1,4 @@
-import styles from "@ui/dashboard/sidebar/sidebar.module.scss";
+import styles from "./sidebar.module.scss";
 import {
   MdDashboard,
   MdSupervisedUserCircle,

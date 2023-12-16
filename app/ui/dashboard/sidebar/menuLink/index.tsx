@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import styles from "@ui/dashboard/sidebar/menuLink/menuLink.module.scss";
+import styles from "./menuLink.module.scss";
 import { usePathname } from "next/navigation";
 
 type Props = {

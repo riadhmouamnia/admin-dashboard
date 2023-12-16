@@ -1,5 +1,5 @@
 "use client";
-import styles from "@ui/dashboard/navbar/navbar.module.scss";
+import styles from "./navbar.module.scss";
 import { usePathname } from "next/navigation";
 import {
   MdNotifications,
