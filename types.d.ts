@@ -8,6 +8,15 @@ type UserDocument = {
     isAdmin: boolean,
     createdAt: string,
   }
+type ProductDocument = {
+    id: string,
+    title: string,
+    desc: string,
+    price: string,
+    img: string,
+    stock: number,
+    createdAt: string,
+  }
 
   type SearchParams = {
    q: string | undefined

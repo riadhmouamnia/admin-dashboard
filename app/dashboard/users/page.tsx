@@ -50,7 +50,7 @@ export default async function UsersPage({
                 </div>
               </td>
               <td>{user.email}</td>
-              <td>12-1-2023</td>
+              <td>{user.createdAt?.toString().slice(4, 16)}</td>
               <td>{user.isAdmin ? "Admin" : "Client"}</td>
               <td>{user.isActive ? "active" : "passive"}</td>
               <td>
