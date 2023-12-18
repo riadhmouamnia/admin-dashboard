@@ -11,7 +11,9 @@ export default async function UsersPage({
   searchParams: SearchParams;
 }) {
   const q = searchParams.q || "";
-  const users = await fetchUsers(q);
+  const page = searchParams.page || "1";
+  const ITEM_PER_PAGE = 2;
+  const { users, count } = await fetchUsers(q, page, ITEM_PER_PAGE);
 
   return (
     <div className={styles.container}>
@@ -70,7 +72,7 @@ export default async function UsersPage({
           ))}
         </tbody>
       </table>
-      <Pagination />
+      <Pagination ITEM_PER_PAGE={ITEM_PER_PAGE} count={count} />
     </div>
   );
 }

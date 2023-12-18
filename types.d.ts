@@ -11,4 +11,5 @@ type UserDocument = {
 
   type SearchParams = {
    q: string | undefined
+   page: string | undefined
   }
