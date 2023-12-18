@@ -5,8 +5,14 @@ import styles from "@ui/dashboard/users/users.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function UsersPage() {
-  const users = await fetchUsers();
+export default async function UsersPage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  const q = searchParams.q || "";
+  const users = await fetchUsers(q);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
