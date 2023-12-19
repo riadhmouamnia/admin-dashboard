@@ -1,9 +1,10 @@
+import { addUser } from "@/app/lib/actions";
 import styles from "@/app/ui/dashboard/users/addUser/addUser.module.scss";
 
-function AddUserPage() {
+export default function AddUserPage() {
   return (
     <div className={styles.container}>
-      <form className={styles.form}>
+      <form className={styles.form} action={addUser}>
         <input type="text" placeholder="username" name="username" required />
         <input type="email" placeholder="email" name="email" required />
         <input
@@ -14,14 +15,14 @@ function AddUserPage() {
         />
         <input type="phone" placeholder="phone" name="phone" />
         <select name="isAdmin" id="isAdmin">
-          <option>Is Admin?</option>
-          <option>Yes</option>
-          <option>No</option>
+          <option value="false">Is Admin?</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
         </select>
         <select name="isActive" id="isActive">
-          <option>Is Active?</option>
-          <option>Yes</option>
-          <option>No</option>
+          <option value="true">Is Active?</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
         </select>
         <textarea
           name="address"
@@ -34,5 +35,3 @@ function AddUserPage() {
     </div>
   );
 }
-
-export default AddUserPage;
