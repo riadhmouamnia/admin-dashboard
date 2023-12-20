@@ -1,3 +1,4 @@
+import { deleteUser } from "@/app/lib/actions";
 import { fetchUsers } from "@/app/lib/data";
 import Pagination from "@/app/ui/dashboard/pagination";
 import Search from "@/app/ui/dashboard/search";
@@ -60,8 +61,8 @@ export default async function UsersPage({
                       View
                     </button>
                   </Link>
-                  <form>
-                    <input type="hidden" name="id" />
+                  <form action={deleteUser}>
+                    <input type="hidden" name="id" value={user.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>

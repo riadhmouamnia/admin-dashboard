@@ -1,3 +1,4 @@
+import { deleteProduct } from "@/app/lib/actions";
 import { fetchProducts } from "@/app/lib/data";
 import Pagination from "@/app/ui/dashboard/pagination";
 import Search from "@/app/ui/dashboard/search";
@@ -60,8 +61,9 @@ export default async function ProductsPage({
                       View
                     </button>
                   </Link>
-                  <form>
-                    <input type="hidden" name="id" />
+                  <form action={deleteProduct}>
+                    <input type="hidden" name="id" value={product.id} />
+                    <input type="hidden" value={product.id} name="id" />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>
