@@ -48,3 +48,8 @@ type ProductUpdateFields = {
   color: FormDataEntryValue;
   size: FormDataEntryValue;
 };
+
+type UserCredentials = {
+  username: string;
+  password: string;
+};
