@@ -41,4 +41,22 @@ export const { auth, signIn, signOut } = NextAuth({
       },
     }),
   ],
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.username = user.username;
+        token.img = user.img;
+        token.role = user.isAdmin ? "Administrator" : "User";
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      if (token) {
+        session.user.name = token.username;
+        session.user.image = token.img;
+        session.user.role = token.role;
+      }
+      return session;
+    },
+  },
 });
